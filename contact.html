@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Chill Love</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+		<link rel="stylesheet" href="css/animate.css">
+		
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+	
+		
+		<link rel="stylesheet" href="css/flaticon.css">
+		<link rel="stylesheet" href="css/style.css">
+	
+		<link rel="icon" 
+		type="image/png" 
+		href="https://cdn.discordapp.com/attachments/858269271696343080/860511952374464532/sm0l_Chill_love_app_3.png">
+	
+		<meta property="og:title" content="Chill Love" />
+		<meta property="og:description" content="Bienvenido a Chill Love! Un sitio donde hacer amigos, conocer a gente nueva y ligar (con cabeza) ¿A que esperas?" />
+		<meta property="og:url" content="https://chill-love.xyz" />
+		<meta property="og:image" content="https://cdn.discordapp.com/attachments/858269271696343080/860511952374464532/sm0l_Chill_love_app_3.png" />
+	</head>
+<body>
+
+	<script>
+		function submitFunc() {
+		  console.log("Hello World!");
+		  const element = document.getElementById("code").value
+
+			  if (element.length >= 1) {
+
+				$.getJSON(`https://wings2.mrserver.ddnss.de:25566/api/v3/mod/${element}`, function(responseObj) {
+					if ((responseObj.action).length >= 1) {
+				window.alert(JSON.stringify(responseObj));
+				window.location.href='index.html';
+				
+			
+			
+			} else {
+					window.alert("El codigo introducido no es válido")
+				}});
+			  
+			
+			
+			} else {
+				window.alert(`Debe introducir un codigo válido`);s
+			  }
+
+		  }
+		</script>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+
+			<h1 id="colorlib-logo" class="mb-4 mb-md-5"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Chill Love</a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li class="colorlib-active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="appeal.html">Appeal</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+			</aside> <!-- END COLORLIB-ASIDE -->
+			<div id="colorlib-main">
+				<section class="ftco-section ftco-no-pt ftco-no-pb">
+					<div class="container px-md-0">
+						<div class="row d-flex no-gutters">
+							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4 heading">Appeal</h3>
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Codigo de castigo</label>
+													<input type="text" class="form-control" name="code" id="code" placeholder="Codigo" required/>
+												</div>
+											</div>
+											<div class="col-md-6"> 	
+												<div class="form-group">
+													<label class="label" for="email">Razón</label>
+													<input type="text" class="form-control" name="reason" id="reason" placeholder="Razón" required/>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input class="btn btn-primary noselect" type="button" value="Enviar" id="submitBut" onclick="submitFunc()">
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						<div class="row d-flex no-gutters">
+							<div id="map" class="map"></div>
+						</div>
+					</div>
+				</section>
+			</div><!-- END COLORLIB-MAIN -->
+		</div><!-- END COLORLIB-PAGE -->
+
+		<!-- loader -->
+		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+		<script src="js/scrollax.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		<script src="js/google-map.js"></script>
+		<script src="js/main.js"></script>
+		
+	</body>
+	</html>

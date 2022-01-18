@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+          function getUrlVars() {
+          var vars = {};
+          var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+              vars[key] = value;
+          
+         let type = JSON.stringify(vars.id)
+         let rawdata = {
+  "angry":"10",
+  "baka":"26",
+  "cuddle":"45",
+  "feed":"17",
+  "hug":"85",
+  "kill":"2",
+  "kiss":"140",
+  "pat":"74",
+  "poke":"23",
+  "slap":"16",
+  "tickle":"20",
+  "cheeks":"6",
+  "gaming":"9",
+  "glare":"10",
+  "heal":"3",
+  "laugh":"10",
+  "scared":"19",
+  "shoot":"14",
+  "spank":"7",
+  "splash":"6",
+  "spray":"3",
+  "stare":"7",
+  "tsundere":"6",
+  "sleep": "15",
+  "run": "15",
+  "punch": "15",
+  "hi": "15",
+  "cook": "15",
+  "confused": "10",
+  "claps": "10",
+  "bored": "10",
+  "boom": "10",
+  "bite": "15",
+  "banghead": "10"
+}
+
+         let num = Math.floor((Math.random() * rawdata[type.replaceAll('"','')]) + 1)
+         
+
+         if (num.toString().length == 1) {
+      document.getElementById("link").innerHTML = `https://chill-love.web.app/api/v1/img/${type.replaceAll('"','')}/${type.replaceAll('"','')}_00${num}.gif`
+         } else if (num.toString().length == 2) {
+      document.getElementById("link").innerHTML = `https://chill-love.web.app/api/v1/img/${type.replaceAll('"','')}/${type.replaceAll('"','')}_0${num}.gif`
+        } else {
+      document.getElementById("link").innerHTML = `https://chill-love.web.app/api/v1/img/${type.replaceAll('"','')}/${type.replaceAll('"','')}_${num}.gif`
+        }
+
+  });
+}
+
+
+    </script>
+      </head>
+      
+      <body onload="getUrlVars()">
+      
+        <h1>{"url": "<span id="link">"}</span></h1>
+      
+      </body>
+</html>
+
+
+
+
+
